@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box ;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px  40px;
+  background: #C4D7FF;
+  font-size: 18px;
+  transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* different color for odd list items*/
+ul li:nth-child(odd){
+  background: #1A4870;
+}
+
+ul li:hover {
+  background: #0d2438;
+}
+
+/* when clicked on list item , background color and strike out text*/
+ul li.checked {
+  background: #40534C;
+  color: #D6BD98;
+  text-decoration: line-through;
+}
+
+/* add a ckecked mark when clicked on it*/
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: bisque;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* close button style*/
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #B22222;
+  color: white;
+}
+
+/* header style*/
+.heading {
+  background-color: #001F3F;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.heading::after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+/* input style*/
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* add button style*/
+.addbutton {
+  padding: 10px;
+  width:25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  border-radius: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.addbutton:hover {
+  background-color: #bbb;
+}
